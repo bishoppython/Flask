@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 class Jogo:
     def __init__(self, nome, categoria, console):
@@ -31,6 +31,6 @@ def criar():
     jogo = Jogo(nome, categoria, console) # Cria-se uma instancia
     lista.append(jogo)
 
-    return render_template('lista.html', titulo='Jogos Listados', jogos=lista)
+    return redirect('/')
 
 app.run(debug=True)
