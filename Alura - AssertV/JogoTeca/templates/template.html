@@ -9,9 +9,9 @@
     <div class="container">
       <div class="page-header">
           <h1>{{ titulo }}</h1>
-          <link rel="stylesheet" href="../static/css/bootstrap.css">
-          <link rel="stylesheet" href="../static/js/bootstrap.js">
-      </div>
+          <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+          <!--link rel="stylesheet" href="../static/js/bootstrap.js"-->
+      </div> <!--Diretiva de bloco de conteudo -->
         {% block conteudo %} {% endblock %}
     </div>
 </body>
