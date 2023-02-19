@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API de Upload de Arquivos</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #eeaeca, #94bbe9); /* Define um background gradiente com as cores lilás e vermelho */
+        font-family: Arial, sans-serif; /* Define a fonte para Arial ou outra fonte sans-serif */
+        color: #9370DB; /* Define a cor da fonte como lilás */
+      }
+
+      .frame {
+        width: 350px; /* Define a largura do frame como 350px */
+        height: 350px; /* Define a altura do frame como 350px */
+        background-color: #FFF; /* Define o fundo do frame como branco */
+        margin: 0 auto; /* Centraliza o frame horizontalmente */
+        display: flex; /* Define o display como flex para centralizar os elementos internos */
+        flex-direction: column; /* Define a direção do flex como coluna para colocar os elementos verticalmente */
+        justify-content: center; /* Alinha os elementos verticalmente no centro do frame */
+        align-items: center; /* Alinha os elementos horizontalmente no centro do frame */
+      }
+
+      label {
+        color: #9370DB; /* Define a cor do texto como lilás */
+        font-size: 24px; /* Define o tamanho da fonte como 24px */
+      }
+
+      input[type="file"] {
+        padding: 10px; /* Adiciona um padding ao input de arquivo para torná-lo mais visível */
+        margin-top: 10px; /* Define uma margem acima do input de arquivo */
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Adiciona um box-shadow ao input de arquivo */
+      }
+
+      input[type="submit"] {
+        background-color: #9370DB; /* Define a cor de fundo do botão como lilás */
+        border: none; /* Remove a borda padrão do botão */
+        padding: 10px; /* Adiciona um padding para tornar o botão mais visível */
+        font-size: 16px; /* Define o tamanho da fonte do botão */
+        color: #FFF; /* Define a cor do texto como branco */
+        cursor: pointer; /* Adiciona um cursor de mão quando o mouse passar sobre o botão */
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Adiciona um box-shadow ao botão */
+        margin-top: 10px; /* Define uma margem acima do botão */
+      }
+      form {
+        text-align: center; /* Centraliza o botão de submit horizontalmente */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <form action="http://127.0.0.1:8000/arquivos"
+            method="POST"
+            enctype="multipart/form-data">
+        <label for="meuArquivo">Upload Arquivo</label>
+        <input type="file" id="meuArquivo" name="meuArquivo">
+        <input type="submit" value="submit">
+      </form>
+    </div>
+  </body>
+</html>
+
